@@ -15,13 +15,17 @@ const mixedNumbers = [6,3,1,7,5,2,6,8,9,4,2,7,9,3,1,8,4,3];
 /*
   Use the filter method on mixedNumbers to make a new array of just the even numbers.
 
+
   The filter function takes a callback with the parameters
   function(element, index, wholeArray){}  Function Form
   (element, index, wholeArray)=>{}    Arrow Form
 */
 
 //Code Here
-let evenNumbers // = mixedNumbers.filter(/* Provide Your Callback Here */)
+let evenNumbers = mixedNumbers.filter(element, index, wholeArray) => {
+  return element
+
+
 
 
 
@@ -126,6 +130,12 @@ const purchases = [{"owner":"Barry","price":103},{"owner":"Bob","price":75},
   Use a high order method to create to get the sum of bobsTotal.
 */
 
-let bobsTotal //Code Here
-
+let bobsTotal = purchases.filter((element) =>{
+  if(element.owner === "Bob"){
+    return element
+  }
+})
+  .map((element) =>{return element.price})
+  .reduce((acc, element) =>{return acc + element})
+console.log(bobsTotal)
 
