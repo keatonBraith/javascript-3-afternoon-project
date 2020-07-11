@@ -161,13 +161,7 @@ var myCar = {
 
 //Code Here
 
-function recordCleaner(){
-  for(i = 0; i < accidents.length; i++){
-    if(accidents[atFaultForAccident] === true){
-      accidents[atFaultForAccident].splice(0, 1, false)
-    }
-  }
-}
+
 
 ////////// PROBLEM 5 //////////
 
@@ -186,4 +180,15 @@ var numsArr = [ [1, 2, 3, 4], [5, 6], [7, 8, 9, 10, 11]];
 
 //Code Here
 
-
+function looper(){
+  for(i = 0; i < numsArr.length; i++){
+    numsArr[i].forEach(function(element, index, array){
+      if(element % 2 === 0){
+        element = 'even'
+      } else if(element % 3 === 0){
+        element = 'odd'
+      }
+    })
+  }
+  return numsArr
+}
